@@ -1,0 +1,3 @@
+MFRC522      [GithubCommunity] (https://github.com/miguelbalboa/rfid)
+PubSubClient [Nick O’Leary]    (https://github.com/knolleary/pubsubclient)
+ServoESP32   [Jaroslav Paral]  (https://github.com/RoboticsBrno/ServoESP32)
