@@ -1,0 +1,36 @@
+TARGET=main
+CXX=c++
+LD=c++
+
+SOURCES := main.cpp
+SOURCES += AnalisadorLexico.cpp
+SOURCES += AnalisadorSintatico.cpp
+SOURCES += FuncoesStrings.cpp
+SOURCES += TabelaLexemes.cpp
+SOURCES += Token.cpp
+SOURCES += FabricaProposicao.cpp
+SOURCES += FabricaProposicoes.cpp
+SOURCES += OperacaoRelacional.cpp
+SOURCES += TabelaVerdade.cpp
+SOURCES += CalculadoraProposicional.cpp
+SOURCES += GerenciadorExecucao.cpp
+
+TESTS := SuiteTestes.cpp
+TESTS += TestesAnalisadorLexico.cpp
+TESTS += TestesAnalisadorSintatico.cpp
+TESTS += TestesFuncoesStrings.cpp
+TESTS += TestesTabelaLexemes.cpp
+TESTS += TestesFabricaProposicao.cpp
+TESTS += TestesFabricaProposicoes.cpp
+TESTS += TestesTabelaVerdade.cpp
+
+OBJS := $(SOURCES) $(TESTS)
+
+main: $(OBJS)
+	$(LD) -o $(TARGET) $(OBJS)
+
+install:
+	@install main /usr/local/bin/main
+
+clean:
+	rm -rf *.o
