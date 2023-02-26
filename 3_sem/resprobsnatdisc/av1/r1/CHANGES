@@ -1,0 +1,12 @@
+MUDANCAS:
+  - Novos atribs para as proposicoes, facilitando debugging
+  - Refatoracoes
+  - Correcao de bugs
+    * Parsing (analise) incorreto dos parenteses, gerando
+    proposicoes inconsistentes e acesso a nullptr (segfault)
+    * Realizava o parsing do op de negacao apenas em proposicoes
+      simples, mas uma child proposition poderia iniciar com uma
+      negacao, foi mantido as logicas separadas porque nao pode
+      simplesmente arrancar da simples pra jogar na filha, iria
+      conduzir a resultados incorretos em alguns casos. Como
+      melhoria, pode-se estudar a unificacao posteriormente
